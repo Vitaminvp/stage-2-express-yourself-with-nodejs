@@ -13,8 +13,6 @@ router.get('/fighters', function(req, res, next) {
 
 router.get('/fighters/:id', function(req, res, next) {
   const fighter = fighters.find(p => p._id === req.params.id);
-  console.log("fighter", fighter);
-
   res.json(fighter);
 });
 
