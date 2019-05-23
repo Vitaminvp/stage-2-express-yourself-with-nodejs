@@ -13,10 +13,10 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({
 //     extended: true
 // }));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/fighters', usersRouter);
 
 module.exports = app;
