@@ -7,7 +7,7 @@ const saveData = (data) => {
   } else {
     return false;
   }
-}
+};
 
 module.exports = {
   saveData
