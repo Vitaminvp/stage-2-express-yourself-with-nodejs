@@ -21,12 +21,11 @@ router.post('/fighters', function(req, res, next) {
   res.json(fighters);
 });
 
-router.put('/fighters/:id', upload,  (req, res, next) => {
+router.put('/fighters/:id', (req, res, next) => {
   const fighter = fighters.find(p => p._id === req.params.id);
-  console.log("fighter", fighter);
   const fighterIndex = fighters.indexOf(fighter);
   fighters[fighterIndex] = { ...fighter, ...req.body};
-  res.json(fighters[fighterIndex]);
+  res.json(fighters);
 });
 
 router.delete('/fighters/:id', (req, res, next) => {
